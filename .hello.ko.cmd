@@ -1,0 +1,1 @@
+cmd_/home/andy/gitproject/hello.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/andy/gitproject/hello.ko /home/andy/gitproject/hello.o /home/andy/gitproject/hello.mod.o ;  true

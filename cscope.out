@@ -1,0 +1,645 @@
+cscope 15 /home/andy/gitproject -q 0000000081 0000003572
+	@hello.c
+
+1 
+	~<löux/öô.h
+>
+
+2 
+	~<löux/moduÀ.h
+>
+
+3 
+MODULE_LICENSE
+("Dual BSD/GPL");
+
+5 
+	$hñlo_öô
+()
+
+7 
+	`¥ötk
+(
+KERN_INFO
+ "Hello kernel\n");
+
+9 
+	}
+}
+
+11 
+	$hñlo_exô
+()
+
+13 
+	`¥ötk
+(
+KERN_INFO
+ "Goodbye\n");
+
+14 
+	}
+}
+
+16 
+moduÀ_öô
+(
+hñlo_öô
+);
+
+17 
+moduÀ_exô
+(
+hñlo_exô
+);
+
+	@hello.mod.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/vîmagic.h
+>
+
+3 
+	~<löux/compûî.h
+>
+
+5 
+MODULE_INFO
+(
+vîmagic
+, 
+VERMAGIC_STRING
+);
+
+6 
+MODULE_INFO
+(
+«me
+, 
+KBUILD_MODNAME
+);
+
+8 
+__visibÀ
+ 
+moduÀ
+ 
+__this_moduÀ
+
+
+9 
+__©åibuã__
+((
+£˘i⁄
+(".gnu.linkonce.this_module"))) = {
+
+10 .
+«me
+ = 
+KBUILD_MODNAME
+,
+
+11 .
+	göô
+ = 
+öô_moduÀ
+,
+
+12 #ifde‡
+CONFIG_MODULE_UNLOAD
+
+
+13 .
+	gexô
+ = 
+˛ónup_moduÀ
+,
+
+15 .
+	g¨ch
+ = 
+MODULE_ARCH_INIT
+,
+
+18 #ifde‡
+CONFIG_RETPOLINE
+
+
+19 
+MODULE_INFO
+(
+ªçﬁöe
+, "Y");
+
+22 c⁄° 
+	g__moduÀ_dïíds
+[]
+
+23 
+__u£d
+
+
+24 
+__©åibuã__
+((
+£˘i⁄
+(".modinfo"))) =
+
+28 
+MODULE_INFO
+(
+§cvîsi⁄
+, "9BD8ECBCC0A03FB53E323C9");
+
+	@ioctl_basic.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/kî√l.h
+>
+
+3 
+	~<löux/fs.h
+>
+
+4 
+	~<löux/£m≠h‹e.h
+>
+
+5 
+	~<löux/cdev.h
+>
+
+6 
+	~"io˘l_basic.h
+"
+
+7 
+	~<löux/vîsi⁄.h
+>
+
+8 
+	gMaj‹
+;
+
+11 
+	$›í
+(
+öode
+ *öode, 
+fûe
+ *
+fûp
+)
+
+14 
+	`¥ötk
+(
+KERN_INFO
+ "Inside open \n");
+
+16 
+	}
+}
+
+18 
+	$ªÀa£
+(
+öode
+ *öode, 
+fûe
+ *
+fûp
+) {
+
+19 
+	`¥ötk
+ (
+KERN_INFO
+ "Inside close \n");
+
+21 
+	}
+}
+
+23 
+	$io˘l_funcs
+(
+fûe
+ *
+fûp
+, 
+cmd
+, 
+¨g
+)
+
+26 
+ªt
+;
+
+28 
+cmd
+)
+
+31 
+IOCTL_HELLO
+:
+
+32 
+	`¥ötk
+(
+KERN_INFO
+ "Hello ioctl world");
+
+36  
+ªt
+;
+
+38 
+	}
+}
+
+40 
+fûe_›î©i⁄s
+ 
+	gf›s
+ = {
+
+41 
+›í
+: open,
+
+42 
+u∆ocked_io˘l
+: 
+io˘l_funcs
+,
+
+43 
+ªÀa£
+:Ñelease
+
+47 
+cdev
+ *
+	gkî√l_cdev
+;
+
+50 
+	$ch¨_¨r_öô
+ () {
+
+51 
+ªt
+;
+
+52 
+dev_t
+ 
+dev_no
+,
+dev
+;
+
+54 
+kî√l_cdev
+ = 
+	`cdev_Æloc
+();
+
+55 
+kî√l_cdev
+->
+›s
+ = &
+f›s
+;
+
+56 
+kî√l_cdev
+->
+ow√r
+ = 
+THIS_MODULE
+;
+
+57 
+	`¥ötk
+ (" Inside init module\n");
+
+58 
+ªt
+ = 
+	`Æloc_chrdev_ªgi⁄
+–&
+dev_no
+ , 0, 1,"char_arr_dev");
+
+59 i‡(
+ªt
+ < 0) {
+
+60 
+	`¥ötk
+("MajorÇumberállocation is failed\n");
+
+61  
+ªt
+;
+
+64 
+Maj‹
+ = 
+	`MAJOR
+(
+dev_no
+);
+
+65 
+dev
+ = 
+	`MKDEV
+(
+Maj‹
+,0);
+
+66 
+	`¥ötk
+ (" Thêmaj‹Çumbî f‹ you∏devi˚ i†%d\n", 
+Maj‹
+);
+
+67 
+ªt
+ = 
+	`cdev_add
+–
+kî√l_cdev
+,
+dev
+,1);
+
+68 if(
+ªt
+ < 0 )
+
+70 
+	`¥ötk
+(
+KERN_INFO
+ "UnableÅoállocate cdev");
+
+71  
+ªt
+;
+
+75 
+	}
+}
+
+77 
+	$ch¨_¨r_˛ónup
+() {
+
+78 
+	`¥ötk
+(
+KERN_INFO
+ " Inside cleanup_module\n");
+
+79 
+	`cdev_dñ
+(
+kî√l_cdev
+);
+
+80 
+	`uƒegi°î_chrdev_ªgi⁄
+(
+Maj‹
+, 1);
+
+81 
+	}
+}
+
+82 
+MODULE_LICENSE
+("GPL");
+
+83 
+moduÀ_öô
+(
+ch¨_¨r_öô
+);
+
+84 
+moduÀ_exô
+(
+ch¨_¨r_˛ónup
+);
+
+	@ioctl_basic.h
+
+1 
+	~<löux/io˘l.h
+>
+
+2 
+	#IOC_MAGIC
+ 'k'
+
+	)
+
+3 
+	#IOCTL_HELLO
+ 
+	`_IO
+(
+IOC_MAGIC
+,0)
+
+	)
+
+	@ioctl_basic.mod.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/vîmagic.h
+>
+
+3 
+	~<löux/compûî.h
+>
+
+5 
+MODULE_INFO
+(
+vîmagic
+, 
+VERMAGIC_STRING
+);
+
+6 
+MODULE_INFO
+(
+«me
+, 
+KBUILD_MODNAME
+);
+
+8 
+__visibÀ
+ 
+moduÀ
+ 
+__this_moduÀ
+
+
+9 
+__©åibuã__
+((
+£˘i⁄
+(".gnu.linkonce.this_module"))) = {
+
+10 .
+«me
+ = 
+KBUILD_MODNAME
+,
+
+11 .
+	göô
+ = 
+öô_moduÀ
+,
+
+12 #ifde‡
+CONFIG_MODULE_UNLOAD
+
+
+13 .
+	gexô
+ = 
+˛ónup_moduÀ
+,
+
+15 .
+	g¨ch
+ = 
+MODULE_ARCH_INIT
+,
+
+18 #ifde‡
+CONFIG_RETPOLINE
+
+
+19 
+MODULE_INFO
+(
+ªçﬁöe
+, "Y");
+
+22 c⁄° 
+	g__moduÀ_dïíds
+[]
+
+23 
+__u£d
+
+
+24 
+__©åibuã__
+((
+£˘i⁄
+(".modinfo"))) =
+
+28 
+MODULE_INFO
+(
+§cvîsi⁄
+, "BB92E890278CE3E9E79F6F4");
+
+	@user_basic_ioctl.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<f˙é.h
+>
+
+3 
+	~"io˘l_basic.h
+"
+
+5 
+	$maö
+ ( ) {
+
+7 
+fd
+;
+
+8 
+fd
+ = 
+	`›í
+("/dev/ãmp", 
+O_RDWR
+);
+
+10 i‡(
+fd
+ == -1)
+
+12 
+	`¥ötf
+("Error in opening file \n");
+
+13 
+	`exô
+(-1);
+
+16 
+	`io˘l
+(
+fd
+,
+IOCTL_HELLO
+);
+
+18 
+	`˛o£
+(
+fd
+);
+
+19 
+	}
+}
+
+	@
+1
+.
+0
+6
+85
+hello.c
+hello.mod.c
+ioctl_basic.c
+ioctl_basic.h
+ioctl_basic.mod.c
+user_basic_ioctl.c

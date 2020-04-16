@@ -1,0 +1,1 @@
+cmd_/home/andy/gitproject/ioctl_basic.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/andy/gitproject/ioctl_basic.ko /home/andy/gitproject/ioctl_basic.o /home/andy/gitproject/ioctl_basic.mod.o ;  true
